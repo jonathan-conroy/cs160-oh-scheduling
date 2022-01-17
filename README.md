@@ -1,13 +1,15 @@
 # CS160 Office Hour Scheduling
-Formulates office hour assignments as an integer programming problem. 
+Formulates office hour assignments (for CS160 Spring 2022) as an integer programming problem. 
 
-Input for each TA:
+## Input for each TA:
 - Number of hours desired
 - 1st, 2nd, and 3rd preference office hour times
 - Other notes (e.g. other TAs they wish to work with or not work with)
 
+## Variables:
 For every `(ta, day, time)` tuple, there is a binary variable that is 1 iff the
 specified TA is assigned to the office hour slot at the day and time.
+There are additional ``dummy variables'' used as indicators of certain conditions (e.g. a variable that is 1 if a certain slot is double-booked and 0 otherwise).
 
 ## Constraints:
 - Every slot can have at most 1 TA, except on Monday (when slots can have 2 TAs)
