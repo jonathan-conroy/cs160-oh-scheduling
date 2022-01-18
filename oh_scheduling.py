@@ -3,11 +3,6 @@ import pandas as pd
 from solver import *
 from pulp import *
 
-NUM_TA = 22
-NUM_SLOTS = 70 # Number of time slots
-TA_NAMES = ["Name-{}".format(i) for i in range(NUM_TA)]#["Jonathan", "Zetty", "Cole", "John"]
-TA_PREF = np.random.rand(NUM_TA, NUM_SLOTS)
-
 # Parameters
 official_name = "First name (official, according to Tufts) "
 last_name = "Last name"
